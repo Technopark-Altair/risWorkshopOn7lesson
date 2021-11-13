@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+  <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+  <div class="form-floating">
+    <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Name" [(ngModel)]="user.name"
+      required>
+    <label for="floatingInput">Name</label>
+  </div>
+  <div class="form-floating">
+    <input type="email" name="email" class="form-control" id="floatingInput1" placeholder="name@example.com"
+      [(ngModel)]="user.email" required>
+    <label for="floatingInput1">Email address</label>
+  </div>
+  <div class="form-floating">
+    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password"
+      [(ngModel)]="user.password" required minlength="10">
+    <label for="floatingPassword">Password</label>
+  </div>
+
+  <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  <p>{{error}}</p>
+</form>
